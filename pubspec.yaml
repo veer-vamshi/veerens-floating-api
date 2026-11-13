@@ -1,6 +1,6 @@
 name: veerens_floating_api
 description: "A draggable floating button on every screen that inspects the latest and full history of your app's API calls as pretty-printed JSON."
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/veer-vamshi/veerens-floating-api
 repository: https://github.com/veer-vamshi/veerens-floating-api
 

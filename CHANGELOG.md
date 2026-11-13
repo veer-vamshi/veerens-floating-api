@@ -1,3 +1,13 @@
+## 0.1.1
+
+Fixes an Android build failure on some Flutter/AGP/Kotlin versions
+("Unresolved reference: compilerOptions" or similar) caused by
+`android/build.gradle.kts` assuming a bleeding-edge Kotlin Gradle Plugin.
+It now applies the Kotlin Android plugin explicitly, pins compilation
+consistently via a JVM toolchain instead of the version-specific
+`kotlinOptions`/`compilerOptions` DSLs, and raises `compileSdk` to 36 to
+satisfy `share_plus`'s own requirement. No Dart-level API changes.
+
 ## 0.1.0
 
 Initial release.
