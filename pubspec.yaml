@@ -1,5 +1,5 @@
 name: veerens_floating_api
-description: "A Flutter Package to show the API response in UI."
+description: "A draggable floating button on every screen that inspects the latest and full history of your app's API calls as pretty-printed JSON."
 version: 0.0.1
 homepage:
 
@@ -8,8 +8,10 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  dio: ^5.11.1
   flutter:
     sdk: flutter
+  share_plus: ^13.3.1
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +23,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  # Native platform code backing the automatic store-install check
+  # (Android: installer package name; iOS: App Store receipt).
+  plugin:
+    platforms:
+      android:
+        package: com.veerens.veerens_floating_api
+        pluginClass: VeerensFloatingApiPlugin
+      ios:
+        pluginClass: VeerensFloatingApiPlugin
 
   # To add assets to your package, add an assets section, like this:
   # assets:
